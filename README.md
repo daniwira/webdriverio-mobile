@@ -1,4 +1,4 @@
-# webdriverio-mobile
+# webdriverio mobile automation
 
 How to Start
 
