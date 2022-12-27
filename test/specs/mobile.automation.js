@@ -20,15 +20,6 @@ describe('Open application', () => {
       await expect(await $(`//android.widget.TextView[@content-desc="Enable TalkBack and Explore-by-touch from accessibility settings. Then touch the colored squares."]`)).toHaveTextContaining("Enable TalkBack and Explore");
       driver.closeApp();
     });
-  
-    it('Success open Default Layout', async () => {
-        driver.activateApp("io.appium.android.apis");
-        await $(`//android.widget.TextView[@content-desc='Content']`).click();
-        await $(`//android.widget.TextView[@content-desc='Resources']`).click();
-        await $(`//android.widget.TextView[@content-desc='Layout Reference']`).click();
-        await expect(await$(`//android.widget.TextView[@content-desc='Default layout']`)).toHaveTextContaining("Default layout");
-        driver.closeApp();
-    });
     
     it('Success View Normal Buttons', async () => {
       driver.activateApp("io.appium.android.apis");
@@ -38,4 +29,13 @@ describe('Open application', () => {
       await expect(await $(`//android.widget.Button[@content-desc="Normal"]`)).toHaveTextContaining("NORMAL");
       driver.closeApp();
     });
+
+    it('Success open Default Layout', async () => {
+      driver.activateApp("io.appium.android.apis");
+      await $(`//android.widget.TextView[@content-desc="Content"]`).click();
+      await $(`//android.widget.TextView[@content-desc="Resources"]`).click();
+      await $(`//android.widget.TextView[@content-desc="Layout Reference"]`).click();
+      await expect(await $(`//android.widget.TextView[@content-desc="Default layout"]`)).toHaveTextContaining("Default layout");
+      driver.closeApp();
+  });
 });
