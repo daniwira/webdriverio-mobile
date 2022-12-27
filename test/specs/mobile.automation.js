@@ -37,5 +37,5 @@ describe('Open application', () => {
       await $(`//android.widget.TextView[@content-desc="Layout Reference"]`).click();
       await expect(await $(`//android.widget.TextView[@content-desc="Default layout"]`)).toHaveTextContaining("Default layout");
       driver.closeApp();
-  });
+    });
 });
